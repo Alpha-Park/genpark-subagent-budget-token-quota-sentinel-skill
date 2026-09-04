@@ -1,0 +1,39 @@
+{
+  "name": "genpark-subagent-budget-token-quota-sentinel-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Hierarchical subagent resource governor and token quota sentinel dynamically tracking burn rates, recursion depth, and budget caps.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "multi-agent",
+  "tags": [
+    "crewai",
+    "quota-sentinel",
+    "token-governor",
+    "recursion-control",
+    "budget-guard"
+  ],
+  "inputs": {
+    "swarm_id": {
+      "type": "string"
+    },
+    "current_depth": {
+      "type": "integer"
+    },
+    "requested_tokens": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "dispatch_id": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string"
+    },
+    "remaining_budget_usd": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
